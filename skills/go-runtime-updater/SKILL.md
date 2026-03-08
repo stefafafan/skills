@@ -9,9 +9,9 @@ description: Pick the correct Go version for `go` and `toolchain` directives. Us
 
 If the user did not give an explicit target, check [Go release history](https://go.dev/doc/devel/release).
 
-- The first `## goX.Y.0` heading is the latest major release line.
-- If that section has `### Minor revisions`, the newest `goX.Y.Z` under it is the latest exact release for that major.
-- Also read the previous major heading because requests for `go` directives may need the previous supported major, not the latest exact toolchain release.
+- The first `## goX.Y.0` heading is the latest release line.
+- If that section has `### Minor revisions`, the newest `goX.Y.Z` under it is the latest exact release for that line. Use that exact version for `toolchain`.
+- When updating a `go` directive, use the relevant release line with patch `.0`, not the latest patch release.
 
 In `go.mod` and `go.work`:
 
@@ -19,8 +19,8 @@ In `go.mod` and `go.work`:
   Use `go mod edit -toolchain=goX.Y.Z` or `go work edit -toolchain=goX.Y.Z`.
 - If a `toolchain go...` directive exists and the user wants a specific version, update only `toolchain` to that version. Do not change `go`.
   Use `go mod edit -toolchain=goX.Y.Z` or `go work edit -toolchain=goX.Y.Z`.
-- If there is no `toolchain` directive and the user wants a specific version that is not the latest major version, update `go` to that version.
-  Use `go mod edit -go=X.Y.Z` or `go work edit -go=X.Y.Z`.
+- If there is no `toolchain` directive and the user wants a specific version that is not the latest major version, update `go` to that release line with patch `.0`.
+  Use `go mod edit -go=X.Y.0` or `go work edit -go=X.Y.0`.
 - If there is no `toolchain` directive and the user wants the latest version or latest major version, ask whether they want to raise the minimum supported Go version or keep compatibility by adding a `toolchain` directive instead.
 - Do not add a new `toolchain` directive unless the user asks for it or confirms that they want the latest toolchain without raising the minimum supported Go version.
 - Preserve formatting and unrelated directives.
@@ -30,5 +30,5 @@ Best practice: `go` is the minimum required Go version. `toolchain` is a suggest
 Examples:
 
 - Latest exact release is `go1.26.1`, file has `go 1.25.0` and `toolchain go1.25.7`: update only to `toolchain go1.26.1`.
-- User requests `1.24.6`, file has only `go 1.23.0`: update to `go 1.24.6`.
+- User requests `1.24.6`, file has only `go 1.23.0`: update to `go 1.24.0`.
 - User requests "latest", file has only `go 1.25.0`: ask whether to change the minimum supported version or add `toolchain go1.26.1`.
