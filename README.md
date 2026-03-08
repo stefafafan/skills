@@ -1,15 +1,13 @@
 # skills
 A compilation of agent skills for me
 
-## Skills
-
-### `go-runtime-updater`
+## `go-runtime-updater`
 Pick the correct Go version for `go` and `toolchain` directives.
 
-#### References
+### References
 - https://blog.arthur1.dev/entry/2025/12/23/163153
 
-#### Installation
+### Installation
 
 Codex
 
