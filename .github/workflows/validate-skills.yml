@@ -33,5 +33,5 @@ jobs:
         run: |
           for dir in ${{ steps.changed-files.outputs.all_changed_files }}; do
             echo "Validating $dir"
-            uv run --with skills-ref==0.1.1 python -m skills_ref validate "$dir"
+            uv run --with skills-ref==0.1.1 agentskills validate "$dir"
           done
