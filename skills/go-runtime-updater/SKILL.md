@@ -7,10 +7,14 @@ description: Pick the correct Go version for `go` and `toolchain` directives. Us
 
 ## Pick And Apply The Version
 
-If the user did not give an explicit target, check [Go release history](https://go.dev/doc/devel/release).
+If the user did not give an explicit target, determine the latest exact stable Go version first.
 
-- The first `## goX.Y.0` heading is the latest release line.
-- If that section has `### Minor revisions`, the newest `goX.Y.Z` under it is the latest exact release for that line. Use that exact version for `toolchain`.
+- Check [pkg.go.dev/std](https://pkg.go.dev/std) and read the `Version: goX.Y.Z` line. Treat that as the latest exact stable release.
+- Do not infer the latest Go version from arbitrary `pkg.go.dev` search results or a random package page. Use `pkg.go.dev/std`.
+- Then check [Go release history](https://go.dev/doc/devel/release) to map that exact version to its release line.
+- On the release history page, the first `## goX.Y.0` heading is the latest release line, not necessarily the latest exact version.
+- If that section has `### Minor revisions`, the newest `goX.Y.Z` under it is the latest exact release for that line. This should match `pkg.go.dev/std`.
+- If `pkg.go.dev/std` and the release history page appear to disagree, prefer `pkg.go.dev/std` for the exact latest stable version and use the release history page only to confirm the matching `goX.Y.0` line.
 - When updating a `go` directive, use the relevant release line with patch `.0`, not the latest patch release.
 
 In `go.mod` and `go.work`:
