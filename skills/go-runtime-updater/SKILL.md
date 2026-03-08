@@ -16,8 +16,11 @@ If the user did not give an explicit target, check [Go release history](https://
 In `go.mod` and `go.work`:
 
 - If a `toolchain go...` directive exists and the user wants the latest version, update only `toolchain` to the latest exact release. Do not change `go`.
+  Use `go mod edit -toolchain=goX.Y.Z` or `go work edit -toolchain=goX.Y.Z`.
 - If a `toolchain go...` directive exists and the user wants a specific version, update only `toolchain` to that version. Do not change `go`.
+  Use `go mod edit -toolchain=goX.Y.Z` or `go work edit -toolchain=goX.Y.Z`.
 - If there is no `toolchain` directive and the user wants a specific version that is not the latest major version, update `go` to that version.
+  Use `go mod edit -go=X.Y.Z` or `go work edit -go=X.Y.Z`.
 - If there is no `toolchain` directive and the user wants the latest version or latest major version, ask whether they want to raise the minimum supported Go version or keep compatibility by adding a `toolchain` directive instead.
 - Do not add a new `toolchain` directive unless the user asks for it or confirms that they want the latest toolchain without raising the minimum supported Go version.
 - Preserve formatting and unrelated directives.
