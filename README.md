@@ -10,3 +10,4 @@ The following are resources that I referenced to create this repo.
 - https://github.com/anthropics/skills/tree/main/skills/skill-creator
 - https://github.com/mgechev/skills-best-practices
 - https://nyosegawa.github.io/posts/claude-code-verify-command/
+- https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf
