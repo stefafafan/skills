@@ -26,6 +26,7 @@ Create or update GitHub Actions workflow files with remote `uses:` entries pinne
 
 ### References
 - https://github.com/suzuki-shunsuke/pinact
+- https://www.reddit.com/r/git/comments/1ixpxi5/how_do_i_get_latest_release_programatically/
 
 ### Installation
 
