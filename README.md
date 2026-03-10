@@ -21,6 +21,26 @@ Claude Code
 /plugin install https://github.com/stefafafan/skills/tree/main/skills/go-runtime-updater
 ```
 
+## `pin-github-actions`
+Create or update GitHub Actions workflow files with remote `uses:` entries pinned to full commit SHAs annotated with the resolved release tag.
+
+### References
+- https://github.com/suzuki-shunsuke/pinact
+
+### Installation
+
+Codex
+
+```text
+$skill-installer install https://github.com/stefafafan/skills/blob/main/skills/pin-github-actions
+```
+
+Claude Code
+
+```text
+/plugin install https://github.com/stefafafan/skills/tree/main/skills/pin-github-actions
+```
+
 ## Resources
 
 Here are resources in general I referenced when creating this repo.
