@@ -9,16 +9,8 @@ Pick the correct Go version for `go` and `toolchain` directives.
 
 ### Installation
 
-Codex
-
 ```text
-$skill-installer install https://github.com/stefafafan/skills/blob/main/skills/go-runtime-updater
-```
-
-Claude Code
-
-```text
-/plugin install https://github.com/stefafafan/skills/tree/main/skills/go-runtime-updater
+npx skills add stefafafan/skills -s go-runtime-updater
 ```
 
 ## `pin-github-actions`
@@ -30,16 +22,17 @@ Create or update GitHub Actions workflow files with remote `uses:` entries pinne
 
 ### Installation
 
-Codex
-
 ```text
-$skill-installer install https://github.com/stefafafan/skills/blob/main/skills/pin-github-actions
+npx skills add stefafafan/skills -s pin-github-actions
 ```
 
-Claude Code
+## `commit-message-writer`
+Draft conventional commit messages that explain why a change exists instead of listing what changed.
+
+### Installation
 
 ```text
-/plugin install https://github.com/stefafafan/skills/tree/main/skills/pin-github-actions
+npx skills add stefafafan/skills -s commit-message-writer
 ```
 
 ## Resources
