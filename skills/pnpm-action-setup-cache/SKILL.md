@@ -1,6 +1,6 @@
 ---
 name: pnpm-action-setup-cache
-description: Update GitHub Actions workflows to use pnpm/action-setup cache support introduced in v4.3.0. Use when creating or editing workflow YAML files that install pnpm, especially when they use actions/setup-node cache: pnpm or actions/cache entries for pnpm store paths.
+description: "Update GitHub Actions workflows to use pnpm/action-setup cache support introduced in v4.3.0. Use when creating or editing workflow YAML files that install pnpm, especially when they use actions/setup-node cache: pnpm or actions/cache entries for pnpm store paths."
 ---
 
 # pnpm/action-setup Cache Migration
