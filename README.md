@@ -35,6 +35,18 @@ Draft conventional commit messages that explain why a change exists instead of l
 npx skills add stefafafan/skills -s commit-message-writer
 ```
 
+## `pnpm-action-setup-cache`
+Update GitHub Actions workflows to use `pnpm/action-setup` built-in caching (`cache: true`) introduced in v4.3.0+, and remove older pnpm caching patterns from `actions/setup-node` or `actions/cache`.
+
+### References
+- https://github.com/pnpm/action-setup/pull/188
+
+### Installation
+
+```text
+npx skills add stefafafan/skills -s pnpm-action-setup-cache
+```
+
 ## Resources
 
 Here are resources in general I referenced when creating this repo.
