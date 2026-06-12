@@ -47,6 +47,20 @@ Update GitHub Actions workflows to use `pnpm/action-setup` built-in caching (`ca
 npx skills add stefafafan/skills -s pnpm-action-setup-cache
 ```
 
+## `specify-cooldown-for-renovate-or-dependabot`
+Add a one-week cooldown to Dependabot or Renovate dependency update configuration.
+
+### References
+- https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference#cooldown-
+- https://docs.renovatebot.com/configuration-options/
+- https://docs.renovatebot.com/key-concepts/minimum-release-age/
+
+### Installation
+
+```text
+npx skills add stefafafan/skills -s specify-cooldown-for-renovate-or-dependabot
+```
+
 ## Resources
 
 Here are resources in general I referenced when creating this repo.
